@@ -21,9 +21,11 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/">
-              Início
-            </Link>
+            <div>
+              <Link to="/">
+                Início
+              </Link>
+            </div>
             {location === "/" && <Selected />}
           </li>
 
