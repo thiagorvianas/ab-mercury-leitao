@@ -5,6 +5,7 @@ export const HeaderDesk = styled.header`
   background-color: #f3f3f3;
   padding: 20px;
   justify-content: space-evenly;
+  align-items: center;
   transition: 0.3s;
 
   div {

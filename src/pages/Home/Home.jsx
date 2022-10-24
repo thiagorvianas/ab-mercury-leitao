@@ -1,14 +1,28 @@
 import React from "react";
 
 import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
 import wave from '../../images/wave.svg';
 import imgOne from '../../images/image-01.jpeg';
 import imgTwo from '../../images/image-02.jpeg';
+import { cursos } from "../../cursos";
 
 import {
   FirstDobra,
-  QuemSomos,
+  Sec,
+  MediumImage,
+  Title,
+  Content,
+  Block,
+  Bar,
+  Card,
+  CardImage,
+  CoursesContent,
+  CourseTitle,
+  Prof,
+  CargaHoraria,
+  CourseInfo,
 } from "./Home.style";
 
 function Home () {
@@ -26,20 +40,53 @@ function Home () {
         <img src={ wave } alt="Imagem gráfica de onda" />
       </FirstDobra>
 
-      <QuemSomos>
+      <Sec>
         <section>
-          <div>
+          <Title>
             <h2>QUEM SOMOS</h2>
-          </div>
+            <Bar green />
+          </Title>
 
-          <div>
-            <img src={ imgOne } alt="" />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.</p>
-            <img src={ imgTwo } alt="" />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.</p>
-          </div>
+          <Content>
+            <Block>
+            <MediumImage src={ imgOne } alt="" />
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.
+            </p>
+            </Block>
+
+            <Block>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.</p>
+            <MediumImage src={ imgTwo } alt="" />
+            </Block>
+          </Content>
         </section>
-      </QuemSomos>
+      </Sec>
+
+      <Sec>
+        <section>
+          <Title>
+            <Bar yellow />
+            <h2>NOSSOS CURSOS</h2>
+          </Title>
+
+          <CoursesContent>
+            { cursos.map((curso) => (
+            <Card key={ curso.id } >
+              <CardImage src={ curso.image } />
+              <CourseInfo>
+                <CourseTitle>{ curso.title }</CourseTitle>
+                <div>
+                  <Prof>{ curso.teatcher }</Prof>
+                  <CargaHoraria>{ `Carga-horária de: ${curso.hours}h` }</CargaHoraria>
+                </div>
+              </CourseInfo>
+            </Card>)
+            ) }
+          </CoursesContent>
+        </section>
+      </Sec>
+
+      <Footer />
     </>
   );
 }
