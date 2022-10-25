@@ -2,6 +2,7 @@ import artesenatoImage from './images/artesenato.jpeg';
 import alfabetizacaoImage from './images/alfabetizacao.jpeg';
 import mktDigitalImage from './images/marketing-digital.jpeg';
 import associativismoImage from './images/associativismo.jpeg';
+import voluntariese from './images/voluntariese.png';
 
 export const cursos = [
     {
@@ -32,4 +33,15 @@ export const cursos = [
         teatcher: 'Prof. Alainy',
         image: artesenatoImage,
     },
+];
+
+export const facaParteData = [
+    {
+        id: 1,
+        title: 'VOLUNTARIE-SE',
+        image: voluntariese,
+        alt: 'Mão aberta com coração',
+        description: 'Faça parte da nossa equipe, torne-se uma pessoa voluntária',
+        btnText: 'Saiba mais',
+    }
 ];

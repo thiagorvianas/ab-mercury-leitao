@@ -6,7 +6,7 @@ import Footer from "../../components/footer/Footer";
 import wave from '../../images/wave.svg';
 import imgOne from '../../images/image-01.jpeg';
 import imgTwo from '../../images/image-02.jpeg';
-import { cursos } from "../../cursos";
+import { cursos, facaParteData } from "../../data";
 
 import {
   FirstDobra,
@@ -23,6 +23,8 @@ import {
   Prof,
   CargaHoraria,
   CourseInfo,
+  FacaParteSec,
+  FacaParteBox,
 } from "./Home.style";
 
 function Home () {
@@ -85,6 +87,17 @@ function Home () {
           </CoursesContent>
         </section>
       </Sec>
+
+      <FacaParteSec>
+        { facaParteData.map((item) => (
+          <FacaParteBox key={ item.id }>
+            <img src={ item.image } alt={ item.alt } />
+            <h2>{ item.title }</h2>
+            <p>{ item.description }</p>
+            <button type="button">{ item.btnText }</button>
+          </FacaParteBox>
+        )) }
+      </FacaParteSec>
 
       <Footer />
     </>

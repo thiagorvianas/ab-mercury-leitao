@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import heartImage from '../../images/heart-image.jpeg';
+import facaParteBg from '../../images/faca-parte.jpg';
 
 export const FirstDobra = styled.section`
   display: flex;
@@ -121,4 +122,27 @@ export const CourseInfo = styled.div`
   height: 50%;
   justify-content: space-between;
   padding: 10px 10px 5px;
+`;
+
+export const FacaParteSec = styled.section`
+  display: flex;
+  background-image: url("${facaParteBg}");
+  background-size: cover;
+  padding: 50px;
+`;
+
+export const FacaParteBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 35px;
+
+  img {
+    width: 100px;
+  }
 `;

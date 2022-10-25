@@ -5,6 +5,8 @@ import { MdEmail } from 'react-icons/md';
 import daLogo from '../../images/datamerica-logo.png';
 import abLogo from '../../images/logo-ab-mercury-leitao.png';
 
+import { Link } from 'react-router-dom';
+
 import {
   FooterSec,
   Title,
@@ -43,8 +45,12 @@ function Footer () {
           </ContactInfos>
 
           <Logos>
-            <img src={ daLogo } alt="" />
+            <a rel="noreferrer" target="_blank" href="http://www.datamericaltda.com.br">
+              <img src={ daLogo } alt="" />
+            </a>
+            <Link to="/">
             <img src={ abLogo } alt="" />
+            </Link>
           </Logos>
         </FooterContent>
 
