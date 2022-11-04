@@ -7,6 +7,7 @@ import wave from '../../images/wave.svg';
 import imgOne from '../../images/image-01.jpeg';
 import imgTwo from '../../images/image-02.jpeg';
 import { cursos, facaParteData } from "../../data";
+import CourseBox from "../../components/course-box/CourseBox";
 
 import {
   FirstDobra,
@@ -16,13 +17,7 @@ import {
   Content,
   Block,
   Bar,
-  Card,
-  CardImage,
   CoursesContent,
-  CourseTitle,
-  Prof,
-  CargaHoraria,
-  CourseInfo,
   FacaParteSec,
   FacaParteBox,
   ShowMore
@@ -75,18 +70,7 @@ function Home () {
           </Title>
 
           <CoursesContent>
-            { cursos.map((curso) => (
-            <Card key={ curso.id } >
-              <CardImage src={ curso.image } />
-              <CourseInfo>
-                <CourseTitle>{ curso.title }</CourseTitle>
-                <div>
-                  <Prof>{ curso.teatcher }</Prof>
-                  <CargaHoraria>{ `Carga-horária de: ${curso.hours}h` }</CargaHoraria>
-                </div>
-              </CourseInfo>
-            </Card>)
-            ) }
+            { cursos.map((curso) => (<CourseBox white curso={ curso } />)) }
           </CoursesContent>
 
           <ShowMore type="button">Ver todos</ShowMore>

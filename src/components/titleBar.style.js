@@ -9,4 +9,8 @@ export const TitleBar = styled.section`
   background-color: #549541;
 //   background-image: url("");
   background-size: cover;
+
+  h1 {
+    font-size: 30px;
+  }
 `;
