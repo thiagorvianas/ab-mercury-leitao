@@ -5,6 +5,7 @@ import associativismoImage from './images/associativismo.jpeg';
 import voluntariese from './images/voluntariese.png';
 import doacoes from './images/coracao.png';
 import saibaMais from './images/casa.png';
+import pronadesc from './images/pronadesc-example.jpeg';
 
 export const cursos = [
     {
@@ -61,5 +62,14 @@ export const facaParteData = [
         alt: 'Casa com coração',
         description: '',
         btnText: 'Saiba mais',
+    }
+];
+
+export const projectsData = [
+    {
+        id: 1,
+        title: 'PRONADESC',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec malesuada dui. Aenean et enim rutrum, ornare mauris nec, facilisis nisl.',
+        previewImage: pronadesc
     }
 ];
