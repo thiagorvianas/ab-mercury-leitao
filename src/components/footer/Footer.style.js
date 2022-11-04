@@ -4,7 +4,7 @@ export const FooterSec = styled.footer`
   display: flex;
   flex-direction: column;
   background-color: #f3f3f3;
-  padding: 0 15vw 50px;
+  padding: 25px 15vw 50px;
 `;
 
 export const Title = styled.div`

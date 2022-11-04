@@ -38,6 +38,7 @@ export const Sec = styled.section`
   section {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -49,11 +50,14 @@ export const MediumImage = styled.img`
 export const Title = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   margin-bottom: 20px;
 `;
 
 export const Bar = styled.div`
-  width: 75%;
+  display: flex;
+  width: 77%;
   height: 5px;
   background-color: ${(prop) => prop.green ? '#549541' : '#edd251'};
   margin: 10px;
@@ -73,11 +77,11 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   width: 250px;
-  height: 250px;
+  height: 300px;
   background-color: white;
   margin: 20px;
   overflow: hidden; 
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
 
   :hover {
@@ -88,7 +92,7 @@ export const Card = styled.div`
 
 export const CardImage = styled.div`
   width: 100%;
-  height: 100px; 
+  height: 150px; 
   background-color: grey;
   background-image: url("${(prop) => prop.src}");
   background-size: cover;
@@ -97,6 +101,8 @@ export const CardImage = styled.div`
 export const CoursesContent = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
 `;
 
 export const CourseTitle = styled.h2`
@@ -119,16 +125,35 @@ export const CargaHoraria = styled.p`
 export const CourseInfo = styled.div`
   display: flex;
   flex-direction: column;
-  height: 50%;
+  height: 45%;
   justify-content: space-between;
-  padding: 10px 10px 5px;
+  padding: 10px 15px 5px;
+`;
+
+export const ShowMore = styled.button`
+  padding: 5px 10px;
+  border: 2px solid #549541;
+  width: 100px;
+  background-color: #549541;
+  border-radius: 20px;
+  margin-top: 15px;
+  color: white;
+  
+  :hover {
+    border: 2px solid #292929;
+    background-color: #f3f3f3;
+    color: #292929;
+    cursor: pointer;
+  }
 `;
 
 export const FacaParteSec = styled.section`
   display: flex;
+  justify-content: space-between;
+  padding: 50px 15vw;
   background-image: url("${facaParteBg}");
   background-size: cover;
-  padding: 50px;
+  // padding: 50px;
 `;
 
 export const FacaParteBox = styled.div`
@@ -137,12 +162,28 @@ export const FacaParteBox = styled.div`
   background-color: white;
   align-items: center;
   justify-content: space-between;
-  padding: 50px;
-  width: 300px;
-  height: 300px;
+  padding: 35px;
+  width: 320px;
+  height: 320px;
   border-radius: 35px;
 
   img {
-    width: 100px;
+    width: 85px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    border: 2px solid #292929;
+    background: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-top: 15px;
+
+    :hover {
+      border: 2px solid #549541;
+      background-color: #549541;
+      color: white;
+      cursor: pointer;
+    }
   }
 `;

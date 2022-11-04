@@ -25,6 +25,7 @@ import {
   CourseInfo,
   FacaParteSec,
   FacaParteBox,
+  ShowMore
 } from "./Home.style";
 
 function Home () {
@@ -51,15 +52,17 @@ function Home () {
 
           <Content>
             <Block>
-            <MediumImage src={ imgOne } alt="" />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.
-            </p>
+              <MediumImage src={ imgOne } alt="" />
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.
+              </p>
             </Block>
 
             <Block>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.</p>
-            <MediumImage src={ imgTwo } alt="" />
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.</p>
+              <MediumImage src={ imgTwo } alt="" />
             </Block>
+
+            <ShowMore type="button">Saiba mais</ShowMore>
           </Content>
         </section>
       </Sec>
@@ -85,6 +88,8 @@ function Home () {
             </Card>)
             ) }
           </CoursesContent>
+
+          <ShowMore type="button">Ver todos</ShowMore>
         </section>
       </Sec>
 
@@ -92,8 +97,10 @@ function Home () {
         { facaParteData.map((item) => (
           <FacaParteBox key={ item.id }>
             <img src={ item.image } alt={ item.alt } />
-            <h2>{ item.title }</h2>
-            <p>{ item.description }</p>
+            <div>
+              <h2>{ item.title }</h2>
+              <p>{ item.description }</p>
+            </div>
             <button type="button">{ item.btnText }</button>
           </FacaParteBox>
         )) }
