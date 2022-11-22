@@ -6,7 +6,6 @@ import facaParteBg from '../../images/faca-parte.jpg';
 export const FirstDobra = styled.section`
   display: flex;
   flex-direction: column;
-  height: 110vh;
   background-image: url("${heartImage}");
   background-size: cover;
 
@@ -14,16 +13,22 @@ export const FirstDobra = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 85vh;
+    text-align: center;
 
     div {
       display: flex;
+      align-items: center;
       color: #f3f3f3;
       justify-content: center;
       padding: 0 20px;
     
       h1 {
         font-size: 50px;
+
+        @media (max-width: 1023px) {
+          font-size: 25px;
+        }
       }
     }
   }
@@ -32,7 +37,7 @@ export const FirstDobra = styled.section`
 export const Sec = styled.section`
   display: flex;
   flex-direction: column;
-  padding: 0 15vw 50px;
+  padding: 50px 15vw 50px;
   background-color: #f3f3f3;
 
   section {
@@ -45,6 +50,10 @@ export const Sec = styled.section`
 export const MediumImage = styled.img`
   width: 350px;
   margin: 0 20px 10px 0;
+
+  @media (max-width: 1023px) {
+    margin: 0 0 20px;
+  }
 `;
 
 export const Title = styled.div`
@@ -53,6 +62,10 @@ export const Title = styled.div`
   justify-content: space-between;
   width: 100%;
   margin-bottom: 20px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
 `;
 
 export const Bar = styled.div`
@@ -67,10 +80,26 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   line-height: 25px;
+
+  @media (max-width: 1023px) {
+    align-items: center;
+  }
 `;
 
 export const Block = styled.div`
   display: flex;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      @media (max-width: 1023px) {
+        margin: 0 0 20px;
+      }
+    }
+  }
 `;
 
 export const CoursesContent = styled.div`
@@ -78,6 +107,10 @@ export const CoursesContent = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
 `;
 
 export const ShowMore = styled.button`
@@ -104,6 +137,10 @@ export const FacaParteSec = styled.section`
   background-image: url("${facaParteBg}");
   background-size: cover;
   // padding: 50px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
 `;
 
 export const FacaParteBox = styled.div`
@@ -120,6 +157,10 @@ export const FacaParteBox = styled.div`
   img {
     width: 85px;
     margin-bottom: 15px;
+
+    @media (max-width: 1023px) {
+      width: 50px;
+    }
   }
 
   button {
@@ -134,6 +175,20 @@ export const FacaParteBox = styled.div`
       background-color: #549541;
       color: white;
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+
+    h2 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 12px;
     }
   }
 `;

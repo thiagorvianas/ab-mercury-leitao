@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import Header from "../../components/header/Header";
+import PagesHeaderUniversal from "../../utils/AlternateHeader";
 import Footer from "../../components/footer/Footer";
 import { TitleBar } from "../../components/titleBar.style";
 import { Sec, Item } from "./Institucional.style";
@@ -9,9 +9,28 @@ import visao from '../../images/Visão.png'
 import valores from '../../images/Valores.png'
 
 function Institucional () {
+  const [isHide, setIsHide] = useState(false);
+  const [prevScroll, setPrevScroll] = useState(0);
+  const [hideHeader, setHideHeader] = useState(false);
+
+  const hideBar = () => {
+    window.scrollY > prevScroll ?
+    !isHide && setIsHide(true)
+    :
+    isHide && setIsHide(false);
+
+    setPrevScroll(window.scrollY);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', hideBar);
+    prevScroll > 150 ? setHideHeader(true) : setHideHeader(false);
+  }, [hideBar, prevScroll]);
+
   return (
     <>
-      <Header />
+      <PagesHeaderUniversal hideHeader={ hideHeader } />
+
       <TitleBar>
         <h1>Institucional</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec malesuada dui. Aenean et enim rutrum, ornare mauris nec, facilisis nisl</p>

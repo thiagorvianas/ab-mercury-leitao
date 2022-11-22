@@ -8,10 +8,10 @@ import {
   Selected,
 } from './Header.style';
 
-function Header() {
+function Header({ fixed }) {
   const location = useLocation().pathname;
   return (
-    <HeaderDesk>
+    <HeaderDesk fixed={ fixed }>
       <div>
         <Link to="/">
           <img src={ logoHorizontal } alt="Logotipo da Associação Beneficente Mercury Leitão" />
@@ -50,12 +50,12 @@ function Header() {
             {location === "/projetos" && <Selected />}
           </li>
 
-          <li>
+          {/* <li>
             <Link to="/fale-conosco">
               Fale Conosco
             </Link>
             {location === "/fale-conosco" && <Selected />}
-          </li>
+          </li> */}
         </ul>
       </nav>
     </HeaderDesk>

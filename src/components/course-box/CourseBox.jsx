@@ -16,7 +16,7 @@ function CourseBox({ curso, white }) {
       <CourseInfo>
         <CourseTitle>{ curso.title }</CourseTitle>
         <div>
-          <Prof>{ curso.teatcher }</Prof>
+          <Prof>{ curso.teacher }</Prof>
           <CargaHoraria>{ `Carga-horária de: ${curso.hours}h` }</CargaHoraria>
         </div>
       </CourseInfo>

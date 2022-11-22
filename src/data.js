@@ -12,28 +12,28 @@ export const cursos = [
         id: 1,
         title: 'Alfabetização de Jovens e Adultos',
         hours: 10,
-        teatcher: 'Prof. Alainy',
+        teacher: 'Prof. Alainy',
         image: alfabetizacaoImage,
     },
     {
         id: 2,
         title: 'Associativismo e Empreendedorismo',
         hours: 10,
-        teatcher: 'Prof. Alainy',
+        teacher: 'Prof. Alainy',
         image: associativismoImage,
     },
     {
         id: 3,
         title: 'Marketing Digital',
         hours: 10,
-        teatcher: 'Prof. Alainy',
+        teacher: 'Prof. Alainy',
         image: mktDigitalImage,
     },
     {
         id: 4,
         title: 'Artesenato',
         hours: 10,
-        teatcher: 'Prof. Alainy',
+        teacher: 'Prof. Alainy',
         image: artesenatoImage,
     },
 ];
@@ -46,6 +46,7 @@ export const facaParteData = [
         alt: 'Mão aberta com coração',
         description: 'Faça parte da nossa equipe, torne-se uma pessoa voluntária',
         btnText: 'Saiba mais',
+        link: ''
     },
     {
         id: 2,
@@ -54,6 +55,7 @@ export const facaParteData = [
         alt: 'Mão aberta com coração',
         description: 'Contribua com a realização do nosso trabalho.',
         btnText: 'Saiba mais',
+        link: ''
     },
     {
         id: 3,
@@ -62,6 +64,7 @@ export const facaParteData = [
         alt: 'Casa com coração',
         description: '',
         btnText: 'Saiba mais',
+        link: 'institucional'
     }
 ];
 

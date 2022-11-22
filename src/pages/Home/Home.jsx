@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 
-import Header from "../../components/header/Header";
+// import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 
-import wave from '../../images/wave.svg';
+// import wave from '../../images/wave.svg';
 import imgOne from '../../images/image-01.jpeg';
 import imgTwo from '../../images/image-02.jpeg';
 import { cursos, facaParteData } from "../../data";
 import CourseBox from "../../components/course-box/CourseBox";
+import PagesHeaderUniversal from "../../utils/AlternateHeader";
 
 import {
   FirstDobra,
@@ -22,12 +23,34 @@ import {
   FacaParteBox,
   ShowMore
 } from "./Home.style";
+import { useHistory } from "react-router-dom";
 
 function Home () {
+  const [isHide, setIsHide] = useState(false);
+  const [prevScroll, setPrevScroll] = useState(0);
+  const [hideHeader, setHideHeader] = useState(false);
+
+  const hideBar = () => {
+    window.scrollY > prevScroll ?
+    !isHide && setIsHide(true)
+    :
+    isHide && setIsHide(false);
+
+    setPrevScroll(window.scrollY);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', hideBar);
+    prevScroll > 150 ? setHideHeader(true) : setHideHeader(false);
+  }, [hideBar, prevScroll]);
+  
+  const history = useHistory();
+
   return (
     <>
+      <PagesHeaderUniversal hideHeader={ hideHeader } />
+
       <FirstDobra>
-        <Header />
 
         <section>
           <div>
@@ -35,7 +58,7 @@ function Home () {
           </div>
         </section>
 
-        <img src={ wave } alt="Imagem gráfica de onda" />
+        {/* <img src={ wave } alt="Imagem gráfica de onda" /> */}
       </FirstDobra>
 
       <Sec>
@@ -57,7 +80,7 @@ function Home () {
               <MediumImage src={ imgTwo } alt="" />
             </Block>
 
-            <ShowMore type="button">Saiba mais</ShowMore>
+            <ShowMore type="button" >Saiba mais</ShowMore>
           </Content>
         </section>
       </Sec>
@@ -73,7 +96,7 @@ function Home () {
             { cursos.map((curso) => (<CourseBox white curso={ curso } />)) }
           </CoursesContent>
 
-          <ShowMore type="button">Ver todos</ShowMore>
+          <ShowMore type="button" onClick={ () => history.push('/cursos') } >Ver todos</ShowMore>
         </section>
       </Sec>
 
@@ -85,7 +108,7 @@ function Home () {
               <h2>{ item.title }</h2>
               <p>{ item.description }</p>
             </div>
-            <button type="button">{ item.btnText }</button>
+            <button type="button" onClick={ () => history.push(`/${item.link}`) }>{ item.btnText }</button>
           </FacaParteBox>
         )) }
       </FacaParteSec>

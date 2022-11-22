@@ -7,6 +7,8 @@ export const HeaderDesk = styled.header`
   justify-content: space-evenly;
   align-items: center;
   transition: 0.3s;
+  position: ${prop => prop.fixed ? 'fixed' : ''};
+  width: 100%;
 
   div {
     img {

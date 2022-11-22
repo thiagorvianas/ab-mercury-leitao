@@ -5,6 +5,10 @@ export const FooterSec = styled.footer`
   flex-direction: column;
   background-color: #f3f3f3;
   padding: 25px 15vw 50px;
+
+  @media (max-width: 1023px) {
+    padding: 25px 5vw 25px;
+  }
 `;
 
 export const Title = styled.div`
@@ -21,7 +25,7 @@ export const Bar = styled.div`
 `;
 
 export const ContactInfos = styled.div`
-  
+
 `;
 
 export const ContactInfo = styled.div`
@@ -42,11 +46,20 @@ export const Logos = styled.div`
     width: 100px;
     margin-left: 20px;
   }
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+  }
 `;
 
 export const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Copyright = styled.div`
