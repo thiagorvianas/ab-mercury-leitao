@@ -29,7 +29,7 @@ list-style: none;
 
   @media (max-width: 1023px) {
     flex-flow: column nowrap;
-    background-color: #232023;
+    background-color: #549541;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;

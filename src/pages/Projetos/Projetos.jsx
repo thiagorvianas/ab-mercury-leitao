@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-import Header from "../../components/header/Header";
+import PagesHeaderUniversal from "../../utils/AlternateHeader";
 import ProjectBox from "../../components/project-box/ProjectBox";
 import { Sec } from "../Institucional/Institucional.style";
 import { projectsData } from "../../data";
@@ -9,9 +9,27 @@ import { TitleBar } from "../../components/titleBar.style";
 import Footer from "../../components/footer/Footer";
 
 function Projetos () {
+  const [isHide, setIsHide] = useState(false);
+  const [prevScroll, setPrevScroll] = useState(0);
+  const [hideHeader, setHideHeader] = useState(false);
+
+  const hideBar = () => {
+    window.scrollY > prevScroll ?
+    !isHide && setIsHide(true)
+    :
+    isHide && setIsHide(false);
+
+    setPrevScroll(window.scrollY);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', hideBar);
+    prevScroll > 150 ? setHideHeader(true) : setHideHeader(false);
+  }, [hideBar, prevScroll]);
+
   return (
     <>
-      <Header />
+      <PagesHeaderUniversal hideHeader={ hideHeader } />
 
       <TitleBar>
         <h1>Projetos</h1>

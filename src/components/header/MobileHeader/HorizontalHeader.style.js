@@ -46,10 +46,10 @@ export const HorizontalMenu = styled.nav`
 
 export const SocialMenu = styled.nav`
   position: absolute;
-  right: 0;
-  top: 120px;
+  right: 100px;
+  bottom: 0px;
   display: flex;
-  background-color: #232023;
+  background-color: #549541;
   padding: 10px;
 `;
 

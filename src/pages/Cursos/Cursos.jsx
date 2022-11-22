@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-import Header from "../../components/header/Header";
+import PagesHeaderUniversal from "../../utils/AlternateHeader";
 import { TitleBar } from "../../components/titleBar.style";
 import { Sec } from "../Institucional/Institucional.style";
 import { CoursesContent } from "../Home/Home.style";
@@ -10,9 +10,27 @@ import Footer from "../../components/footer/Footer";
 import { cursos } from '../../data';
 
 function Cursos () {
+  const [isHide, setIsHide] = useState(false);
+  const [prevScroll, setPrevScroll] = useState(0);
+  const [hideHeader, setHideHeader] = useState(false);
+
+  const hideBar = () => {
+    window.scrollY > prevScroll ?
+    !isHide && setIsHide(true)
+    :
+    isHide && setIsHide(false);
+
+    setPrevScroll(window.scrollY);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', hideBar);
+    prevScroll > 150 ? setHideHeader(true) : setHideHeader(false);
+  }, [hideBar, prevScroll]);
+  
   return (
     <>
-      <Header />
+      <PagesHeaderUniversal hideHeader={ hideHeader } />
 
       <TitleBar>
         <h1>Cursos</h1>
