@@ -65,7 +65,7 @@ export const ActSubTitle = styled.div`
   align-items: center;
   width: 100%;
   font-size: 12px;
-  margin-bottom: 35px;
+  margin-top: 15px;
   opacity: 50%;
 
   div {

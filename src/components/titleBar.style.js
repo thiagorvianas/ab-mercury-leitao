@@ -12,6 +12,7 @@ export const TitleBar = styled.section`
 
   h1 {
     font-size: 30px;
+    margin-bottom: 15px;
   }
 
   @media (max-width: 1023px) {

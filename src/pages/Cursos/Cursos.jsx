@@ -27,7 +27,6 @@ function Cursos () {
     window.addEventListener('scroll', hideBar);
     prevScroll > 150 ? setHideHeader(true) : setHideHeader(false);
   }, [hideBar, prevScroll]);
-  
   return (
     <>
       <PagesHeaderUniversal hideHeader={ hideHeader } />
@@ -39,7 +38,7 @@ function Cursos () {
 
       <Sec>
         <CoursesContent>
-          { cursos.map((curso) => (<CourseBox curso={ curso } />)) }
+          { cursos.map((curso) => (<CourseBox key={ curso.id } curso={ curso } />)) }
         </CoursesContent>
       </Sec>
 

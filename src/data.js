@@ -11,30 +11,42 @@ export const cursos = [
     {
         id: 1,
         title: 'Alfabetização de Jovens e Adultos',
-        hours: 10,
+        workload: 10,
         teacher: 'Prof. Alainy',
+        date: '22/11/2022',
         image: alfabetizacaoImage,
+        photos: [alfabetizacaoImage],
+        text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.'
     },
     {
         id: 2,
         title: 'Associativismo e Empreendedorismo',
-        hours: 10,
+        workload: 10,
         teacher: 'Prof. Alainy',
+        date: '22/11/2022',
         image: associativismoImage,
+        photos: [associativismoImage],
+        text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.'
     },
     {
         id: 3,
         title: 'Marketing Digital',
-        hours: 10,
+        workload: 10,
         teacher: 'Prof. Alainy',
+        date: '22/11/2022',
         image: mktDigitalImage,
+        photos: [mktDigitalImage],
+        text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.'
     },
     {
         id: 4,
         title: 'Artesenato',
-        hours: 10,
+        workload: 10,
         teacher: 'Prof. Alainy',
+        date: '22/11/2022',
         image: artesenatoImage,
+        photos: [artesenatoImage],
+        text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.'
     },
 ];
 

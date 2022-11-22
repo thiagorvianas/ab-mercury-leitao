@@ -108,6 +108,11 @@ export const CoursesContent = styled.div`
   align-items: center;
   width: 100%;
 
+  a {
+    color: #292929;
+    text-decoration: none;
+  }
+
   @media (max-width: 1023px) {
     flex-direction: column;
   }

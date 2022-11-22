@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import Footer from "../../../components/Footer";
-import { PagesHeaderUniversal } from "../../../utils/AlternateHeader";
+import Footer from "../../../components/footer/Footer";
+import PagesHeaderUniversal from "../../../utils/AlternateHeader";
+import { TitleBar } from "../../../components/titleBar.style";
 
 import {
   Act, ActInfo, ActItems, ActMain, ActSubTitle, ActTitle
@@ -12,11 +13,11 @@ import { AiTwotoneCalendar } from 'react-icons/ai';
 import { BiTimeFive, BiUserCircle } from 'react-icons/bi';
 import PhotoMural from "../../../components/photo-mural/PhotoMural";
 
-import actionsData from "../../../db/Actions.db";
+import { cursos } from "../../../data";
 
 function Curso () {
   const { id } = useParams();
-  const data = actionsData[id - 1];
+  const data = cursos[id - 1];
 
   const [isHide, setIsHide] = useState(false);
   const [prevScroll, setPrevScroll] = useState(0);
@@ -40,28 +41,28 @@ function Curso () {
     <>
       <PagesHeaderUniversal hideHeader={ hideHeader } />
       
-      <Act>
-        <ActTitle>
+        <TitleBar>
           <h1>{ data.title }</h1>
-        </ActTitle>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec malesuada dui. Aenean et enim rutrum, ornare mauris nec, facilisis nisl</p>
 
-        <ActSubTitle>
-          <ActInfo>
-            <BiUserCircle />
-            <p>{ data.teacher }</p>
-          </ActInfo>
-            
-          <ActInfo>
-            <AiTwotoneCalendar />
-            <p>{ data.date }</p>
-          </ActInfo>
+          <ActSubTitle>
+            <ActInfo>
+              <BiUserCircle />
+              <p>{ data.teacher }</p>
+            </ActInfo>
+              
+            <ActInfo>
+              <AiTwotoneCalendar />
+              <p>{ data.date }</p>
+            </ActInfo>
 
-          <ActInfo>
-            <BiTimeFive />
-            <p>{ `${data.workload}h` }</p>
-          </ActInfo>
-        </ActSubTitle>
-
+            <ActInfo>
+              <BiTimeFive />
+              <p>{ `${data.workload}h` }</p>
+            </ActInfo>
+          </ActSubTitle>
+        </TitleBar>
+      <Act>
         <ActMain>
           <ActItems>
             <p>{ data.text }</p>
