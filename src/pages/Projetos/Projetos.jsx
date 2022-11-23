@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import PagesHeaderUniversal from "../../utils/AlternateHeader";
 import ProjectBox from "../../components/project-box/ProjectBox";
-import { Sec } from "../Institucional/Institucional.style";
 import { projectsData } from "../../data";
-import { Projects } from "./Projetos.style";
+import { Projects, Sec } from "./Projetos.style";
 import { TitleBar } from "../../components/titleBar.style";
 import Footer from "../../components/footer/Footer";
 
@@ -37,9 +36,9 @@ function Projetos () {
       </TitleBar>
 
       <Sec>
-      <Projects>
-        { projectsData.map((project) => (<ProjectBox project={ project }/>)) }
-      </Projects>
+        <Projects>
+          { projectsData.map((project) => (<ProjectBox project={ project }/>)) }
+        </Projects>
       </Sec>
 
       <Footer />

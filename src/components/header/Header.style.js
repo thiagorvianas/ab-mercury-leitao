@@ -9,6 +9,7 @@ export const HeaderDesk = styled.header`
   transition: 0.3s;
   position: ${prop => prop.fixed ? 'fixed' : ''};
   width: 100%;
+  z-index: 1;
 
   div {
     img {

@@ -80,7 +80,7 @@ function Home () {
               <MediumImage src={ imgTwo } alt="" />
             </Block>
 
-            <ShowMore type="button" >Saiba mais</ShowMore>
+            <ShowMore type="button" onClick={ () => history.push('/institucional') }>Saiba mais</ShowMore>
           </Content>
         </section>
       </Sec>
@@ -108,7 +108,7 @@ function Home () {
               <h2>{ item.title }</h2>
               <p>{ item.description }</p>
             </div>
-            <button type="button" onClick={ () => history.push(`/${item.link}`) }>{ item.btnText }</button>
+            <ShowMore type="button" onClick={ () => history.push(`/${item.link}`) }>{ item.btnText }</ShowMore>
           </FacaParteBox>
         )) }
       </FacaParteSec>

@@ -19,7 +19,9 @@ function MobileHeadGeral({ fixed }) {
       <Link href="/">
         <LogoABM src={ logoHorizontal } alt="Logotipo da Associação Beneficente Mercury Leitão" />
       </Link>
-      <BurgerMenu open={open} onClick={() => setOpen(!open)}>
+      <BurgerMenu open={open} onClick={() => {
+        setOpen(!open);
+      }}>
         <div />
         <div />
         <div />

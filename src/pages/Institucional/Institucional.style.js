@@ -4,9 +4,11 @@ export const Sec = styled.section`
   display: flex;
   flex-direction: column;
   padding: 25px 15vw 50px;
-
+  
   @media (max-width: 1023px) {
+    align-items: center;
     padding: 25px 5vw 50px;
+    text-align: center;
   }
 `;
 
@@ -22,12 +24,14 @@ export const Item = styled.div`
     margin-right: 25px;
     
     @media (max-width: 1023px) {
-      margin-bottom: 10px;
+      margin: 0 0 10px;
     }
   }
 
   @media (max-width: 1023px) {
     flex-direction: column;
+    align-content: center;
+    justify-content: center;
   }
 
 `;

@@ -68,6 +68,7 @@ export const Copyright = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 35px;
+  text-align: center;
   
   p {
     font-size: 12px;

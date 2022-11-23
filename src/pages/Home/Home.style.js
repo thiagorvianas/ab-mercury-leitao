@@ -124,7 +124,7 @@ export const ShowMore = styled.button`
   width: 100px;
   background-color: #549541;
   border-radius: 20px;
-  margin-top: 15px;
+  margin: 10px 0;
   color: white;
   
   :hover {
@@ -159,27 +159,16 @@ export const FacaParteBox = styled.div`
   height: 320px;
   border-radius: 35px;
 
+  button {
+    margin-top: 10px;
+  }
+
   img {
     width: 85px;
     margin-bottom: 15px;
 
     @media (max-width: 1023px) {
       width: 50px;
-    }
-  }
-
-  button {
-    border: 2px solid #292929;
-    background: none;
-    border-radius: 20px;
-    padding: 5px 10px;
-    margin-top: 15px;
-
-    :hover {
-      border: 2px solid #549541;
-      background-color: #549541;
-      color: white;
-      cursor: pointer;
     }
   }
 
