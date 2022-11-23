@@ -7,6 +7,7 @@ import Cursos from './pages/Cursos/Cursos';
 import Projetos from './pages/Projetos/Projetos';
 // import FaleConosco from './pages/Fale-conosco/FaleConosco';
 import Curso from './pages/Cursos/Curso/Curso';
+import Projeto from './pages/Projetos/Projeto/Projeto';
 
 function Content() {
   return (
@@ -16,7 +17,7 @@ function Content() {
       <Route exact path="/cursos" component={ Cursos } />
         <Route exact path="/cursos/:id" component={ Curso } />
       <Route exact path="/projetos" component={ Projetos } />
-        <Route exact path="/projetos/:id" component={ Projetos } />
+        <Route exact path="/projetos/:id" component={ Projeto } />
       {/* <Route exact path="/fale-conosco" component={ FaleConosco } /> */}
     </Switch>
   );

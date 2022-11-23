@@ -85,6 +85,10 @@ export const projectsData = [
         id: 1,
         title: 'PRONADESC',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec malesuada dui. Aenean et enim rutrum, ornare mauris nec, facilisis nisl.',
-        previewImage: pronadesc
+        date: '22/11/2022',
+        previewImage: pronadesc,
+        teacher: 'Prof. Alainy',
+        photos: [artesenatoImage],
+        text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos laborum dicta, nesciunt repudiandae reiciendis dolores distinctio cum similique animi architecto vitae voluptates quae, temporibus asperiores totam, minus culpa suscipit blanditiis.'
     }
 ];

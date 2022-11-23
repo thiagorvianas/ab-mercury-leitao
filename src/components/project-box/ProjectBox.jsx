@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+
+import { useHistory } from 'react-router-dom';
 
 import {
   PreviewText,
@@ -7,9 +9,11 @@ import {
   Info,
   ProjectContent,
 } from './ProjectBox.style';
-import { ShowMore } from "../../pages/Home/Home.style";
+import { ShowMore } from '../../pages/Home/Home.style';
 
 function ProjectBox({ project }) {
+  const history = useHistory();
+
   return (
     <Box>
         <ProjectImage image={ project.previewImage } />
@@ -20,7 +24,7 @@ function ProjectBox({ project }) {
             <PreviewText>{ project.description }</PreviewText>
             </Info>
         
-            <ShowMore type="button">Saiba mais</ShowMore>
+            <ShowMore type="button" onClick={ () => history.push(`/projetos/${project.id}`) } >Saiba mais</ShowMore>
         </ProjectContent>
     </Box>
   );

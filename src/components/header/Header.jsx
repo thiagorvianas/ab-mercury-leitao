@@ -40,14 +40,14 @@ function Header({ fixed }) {
             <Link to="/cursos">
               Cursos
             </Link>
-            {location === "/cursos" && <Selected />}
+            {location.includes("/cursos") && <Selected />}
           </li>
 
           <li>
             <Link to="/projetos">
               Projetos
             </Link>
-            {location === "/projetos" && <Selected />}
+            {location.includes("/projetos") && <Selected />}
           </li>
 
           {/* <li>
